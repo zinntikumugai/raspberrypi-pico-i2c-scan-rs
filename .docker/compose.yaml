@@ -1,0 +1,12 @@
+services:
+  raspberrypi-pico-i2c-scan-rs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "baker-link-env"
+    container_name: "raspberrypi-pico-i2c-scan-rs-container"
+    volumes:
+      - "../:/raspberrypi-pico-i2c-scan-rs"
+    working_dir: /raspberrypi-pico-i2c-scan-rs
+    command: /bin/sh
+    tty: true
